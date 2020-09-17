@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Information Display</title>
+	<style>* {
+        margin: 0px;
+        padding: 0px;
+      }
 
+      .data {
+        height: 500px;
+        width: 80%;
+        background-color: #adf7c1;
+        margin-left: 10%;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .table {
+        width: 100%;
+        margin-top: 20px;
+        font-family: serif;
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .form {
+        margin-top: 20px;
+      }
+      input {
+        height: 40px;
+        text-indent: 20px;
+      }
+
+      button {
+        padding: 10px;
+        height: 90%;
+        background-color: #0ba355;
+        font-size: 14px;
+        font-style: bold;
+      }
+
+</style>
+</head>
+<body>
+	<div class="data">
+		<h1>Information Details</h1>
+
+		<div class="form">
+        <form onsubmit="addinfo(event)">
+          <input type="text" required placeholder="Name" id="name" />
+          <input type="number" required placeholder="Age" id="age" />
+          <input type="text" required placeholder="City" id="city" />
+          <input type="number" required placeholder="Salary" id="salary" />
+          <button type="submit">Add </button>
+        </form>
+      </div>
+
+
+      <div class="form">
+        <input type="text" placeholder="Start Searching here" id="searchName" onkeyup="searchByName()"/>
+      </div>
+
+       <div class="form">
+        <input
+          type="text"
+          placeholder="Start Searching here"
+          id="searchCity"
+          onkeyup="searchByCity()"
+        />
+      </div>
+
+		 <table border="1" class="table" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Sr no</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tdata" id="tdata"></tbody>
+      </table>
+	</div>
+
+
+<script type="text/javascript" src="script1.js"></script>
+</body>
+</html>
