@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bus Management System</title>
+	<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+      }
 
+      .data {
+        height: 500px;
+        width: 80%;
+        background-color: #80d4ff;
+        margin-left: 10%;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .table {
+        width: 100%;
+        margin-top: 20px;
+        font-family: serif;
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .form {
+        margin-top: 20px;
+      }
+      input {
+        height: 40px;
+        text-indent: 20px;
+      }
+
+      button {
+        padding: 10px;
+        height: 90%;
+        width: 10%;
+        background-color:  #1ab2ff;
+        font-size: 18px;
+        font-style: solid;
+      }
+
+</style>
+</head>
+<body>
+	<div class="data">
+		<h1>Bus Management System</h1>
+
+		<div class="form">
+        <form onsubmit="add(event)">
+          <input type="text" required placeholder="Name" id="name" />
+          <input type="text" required placeholder="Source" id="source" />
+          <input type="text" required placeholder="Destination" id="dest" />
+          <input type="number" required placeholder="Bus Number" id="numb" />
+          <input type="number" required placeholder="Passenger Capacity" id="pass">
+          <button type="submit">Add </button>
+        </form>
+      </div>
+
+
+      <div class="form">
+        <input type="text" placeholder="Start Searching here" id="searchDest" onkeyup="searchByDest()"/>
+      </div>
+
+
+		 <table border="1" class="table" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Sr no</th>
+            <th>Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Bus Number</th>
+            <th>Passenger Capacity</th>
+          </tr>
+        </thead>
+        <tbody id="trows"></tbody>
+      </table>
+	</div>
+
+
+<script type="text/javascript" src="script2.js"></script>
+</body>
+</html>
